@@ -1,5 +1,6 @@
 import os.path
 
+import pygame.image
 from pygame import *
 MOVE_SPEED = 5
 WIDTH = 22
@@ -16,8 +17,8 @@ class Player(sprite.Sprite):
         self.xvel = 0  # скорость перемещения. 0 - стоять на месте
         self.startX = x  # Начальная позиция Х, пригодится когда будем переигрывать уровень
         self.startY = y
-        self.image = C:\Users\15\PycharmProjects\PYGAME\img.png
-        self.image = transform.scale(25, 35)
+        self.image = pygame.image.load("images/img.png")
+        self.image = transform.scale(self.image, (25, 35))
         self.rect = Rect(x, y, WIDTH, HEIGHT)  # прямоугольный объект
         self.yvel = 0  # скорость вертикального перемещения
         self.on_ground = False  # На земле ли я?
