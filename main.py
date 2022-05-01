@@ -63,7 +63,8 @@ def level_loader(level, hero):
     entities = pygame.sprite.Group()  # Все объекты
     platforms = []  # то, во что мы будем врезаться или опираться
     entities.add(hero)
-    x = y = 0  # координаты
+    x = 0
+    y = 0
     for row in level:  # вся строка
         for col in row:  # каждый символ
             if col == "-":
@@ -88,7 +89,7 @@ def main():
     pygame.display.set_caption("My First Game")  # Пишем в шапку
     bg = Surface(DISPLAY)  # Создание видимой поверхности background
 
-    # будем использовать как фон
+    # будем использовать как бекграунд
     bg.fill(Color(BACKGROUND_COLOR))  # Заливаем поверхность сплошным цветом
 
     hero = Player(55, 55)  # создаем героя по (x,y) координатам
@@ -134,3 +135,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
