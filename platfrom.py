@@ -13,3 +13,4 @@ class Platform(sprite.Sprite):
         self.image = pygame.image.load("images/img.jpg")
         self.image = transform.scale(self.image, (35, 35))
         self.rect = Rect(x, y, PLATFORM_WIDTH, PLATFORM_HEIGHT)
+        # Привет от Саши
